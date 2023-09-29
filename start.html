@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Form</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="e-mail">Enter your e-mail: <abbr title="required">*</abbr></label>
+      <input type="email" name="e-mail" id="e-mail" placeholder="exmple@gmail.com">
+
+      <label for="pw">Password: <abbr title="required">*</abbr></label>
+      <input type="password" name="pw" id="pw">
+
+      <label for="first_name">Name: <abbr title="required">*</abbr></label>
+      <input type="text" name="first_name" id="first_name" placeholder="e.g. Mario">
+
+      <label for="last_name">Lastname: <abbr title="required">*</abbr></label>
+      <input type="text" name="last_name" id="last_name" placeholder="e.g. Rossi">
+
+      <label for="birth_date">Date of Birth: <abbr title="required">*</abbr></label>
+      <input type="date" name="birth_date" id="birth_date">
+      
+      <label for="tel_num">Telephone number:</label>
+      <input type="tel" name="tel_num" id="tel_num" pattern="[0-9]+" maxlength="10">
+
+      <fieldset>
+        <legend>Choose your plan</legend>
+        <label for="free_plan">
+          <input type="radio" name="plan" id="free_plan" value="free_plan">
+          Free plan
+        </label>
+        <label for="first_plan">
+          <input type="radio" name="plan" id="first_plan">
+          5,99€ per month
+        </label>
+        <label for="second_plan">
+          <input type="radio" name="plan" id="second_plan">
+          9,99€ per month
+        </label>
+        <label for="tirth_plan">
+          <input type="radio" name="plan" id="tirth_plan">
+          15,99€ per month
+        </label>
+        <label for="pro_plan">
+          <input type="checkbox" name="plan" id="pro_plan">
+          Pro plan
+        </label>
+      </fieldset>
+
+      <fieldset> 
+        <legend>Here for payament</legend>
+        <div>        
+          <label for="num_creditc">Credit card number <abbr title="required">*</abbr></label>
+          <input type="text" name="pay" id="num_creditc" required pattern="[0-9]+" maxlength="16" minlength="16">
+        </div>
+        <div>
+          <label for="cvc">CVC <abbr title="required">*</abbr></label>          
+          <input type="text" name="pay" id="cvc" required pattern="[0-9]+" maxlength="3" minlength="3">
+        </div>
+        <div>
+          <label for="exp_date">Expiration date (month year) <abbr title="required">*</abbr></label>
+          <input type="month" name="pay" id="exp_date" required>
+        </div>
+        <div>        
+          <label for="bill_addr">Billing address <abbr title="required">*</abbr></label>
+          <input type="text" name="pay" id="bill_addr" placeholder="e.g. via Roma 20, Firenze">
+        </div>
+      </fieldset>
+    
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
